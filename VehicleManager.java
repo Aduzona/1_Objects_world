@@ -18,7 +18,7 @@ class VehicleManager{
 
   public Vehicle searchVehicle(String searchVeh){
     for(int i=0; i<countVehicle; i++){
-      if(vehicleArray[i].color.equals(searchVeh)){
+      if(vehicleArray[i].object_name.equals(searchVeh)){
 
         return vehicleArray[i];
       } 
@@ -26,6 +26,17 @@ class VehicleManager{
     
     return null;
 
+  }
+
+  public void vehicleString(){
+    System.out.println("object_name "+" color "+ " power " + " seats ");
+    for(int i=0; i<countVehicle; i++){
+      String display  = " "+ vehicleArray[i].object_name +"   "+ vehicleArray[i].color + "  "+ vehicleArray[i].power+ "  "+ vehicleArray[i].seats ;
+
+      System.out.println(display);
+   } 
+    
+    //return display;
   }
 
 }

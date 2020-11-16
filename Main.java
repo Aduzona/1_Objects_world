@@ -68,15 +68,39 @@ class Main {
   public static void vehicleCall(){
 
     Vehicle myCar= new Vehicle();
+    myCar.object_name="myCar";
     myCar.color="blue";
     myCar.power= 160;
     myCar.seats= 2;
 
+    Vehicle oldBus=new Vehicle();
+    oldBus.object_name="oldBus";
+    oldBus.color="black";
+    oldBus.power= 330	;
+    oldBus.seats= 14;
+   
+    Vehicle myDreamCar=new Vehicle();
+    myDreamCar.object_name= "myDreamCar";
+    myDreamCar.color="purple";
+    myDreamCar.power= 260	;
+    myDreamCar.seats= 5;
+   
+    Vehicle theBeast=new Vehicle();
+    theBeast.object_name="theBeast";
+    theBeast.color="red";
+    theBeast.power= 2000	;
+    theBeast.seats= 2;
+    
 
     VehicleManager manager= new VehicleManager();
     manager.addVehicle(myCar);
+    manager.addVehicle(oldBus);
+    manager.addVehicle(myDreamCar);
+    manager.addVehicle(theBeast);
 
-    Vehicle vehicleDisplay= manager.searchVehicle("blue");
+    Vehicle vehicleDisplay= manager.searchVehicle("myCar");
     System.out.println("Vehicle Added "+ vehicleDisplay.color);
+
+    manager.vehicleString();
   }
 }
